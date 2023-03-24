@@ -1,1 +1,1 @@
-# 2023-spring-computer-n-tea
+# 2023-spring-computer-1-tea
