@@ -12,6 +12,12 @@
         android:theme="@style/Theme.YingCha"
         tools:targetApi="31">
         <activity
+            android:name=".MyLikes"
+            android:exported="false" />
+        <activity
+            android:name=".MyCollection"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
