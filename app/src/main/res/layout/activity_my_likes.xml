@@ -66,7 +66,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:onClick="windowClick2">
 
 
                 <TextView
@@ -78,7 +79,7 @@
                     android:text="断章。"
                     android:textSize="14dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/star1"
+                    app:layout_constraintEnd_toStartOf="@+id/like1"
                     app:layout_constraintStart_toEndOf="@+id/user1"
                     tools:ignore="TextSizeCheck" />
 

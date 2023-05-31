@@ -10,4 +10,5 @@
     <color name="cardColor">#7381B337</color>
     <color name="starColor">#FEFA83</color>
     <color name="likeColor">#DE868F</color>
+    <color name="windowColor">#B0F4CE98</color>
 </resources>
