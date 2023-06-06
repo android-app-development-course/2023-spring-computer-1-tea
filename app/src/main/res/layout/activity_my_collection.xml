@@ -51,76 +51,19 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+    <GridView
+        android:id="@+id/gridview_collection"
+        android:gravity="center"
+        android:columnWidth="180dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="3"
+        android:verticalSpacing="10dp"
+        android:cacheColorHint="#00000000"
+        android:listSelector="#00000000"
+        android:scrollbars="none">
+    </GridView>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card1"
-            android:layout_width="180dp"
-            android:layout_height="251dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="10dp"
-            app:cardBackgroundColor="@color/cardColor"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="10dp"
-            app:cardPreventCornerOverlap="true"
-            app:cardUseCompatPadding="false"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:onClick="windowClick1">
-
-
-                <TextView
-                    android:id="@+id/username1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="25dp"
-                    android:text="断章。"
-                    android:textSize="14dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/star1"
-                    app:layout_constraintStart_toEndOf="@+id/user1"
-                    tools:ignore="TextSizeCheck" />
-
-                <ImageView
-                    android:id="@+id/user1"
-                    android:layout_width="0dp"
-                    android:layout_height="41dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginBottom="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/username1"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:srcCompat="@mipmap/headScu" />
-
-                <ImageView
-                    android:id="@+id/star1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="29dp"
-
-                    android:layout_marginBottom="22dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/username1"
-                    app:srcCompat="@drawable/star" />
-
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="126dp"
-                    android:layout_height="157dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/username1"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.434"
-                    app:srcCompat="@mipmap/examplePicture" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
