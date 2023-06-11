@@ -11,7 +11,7 @@
         android:id="@+id/winLogo"
         android:layout_width="79dp"
         android:layout_height="79dp"
-        app:srcCompat="@mipmap/headScu"
+        app:srcCompat="@mipmap/headscu"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"/>
 
@@ -36,7 +36,7 @@
         android:id="@+id/winImage"
         android:layout_width="149dp"
         android:layout_height="206dp"
-        app:srcCompat="@mipmap/examplePicture"
+        app:srcCompat="@mipmap/examplepicture"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="170dp"
         android:layout_marginLeft="20dp"/>
