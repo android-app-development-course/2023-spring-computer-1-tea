@@ -12,6 +12,15 @@
         android:theme="@style/Theme.YingCha"
         tools:targetApi="31">
         <activity
+            android:name=".TasteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomePageActivity"
+            android:exported="false" />
+        <activity
             android:name=".MyLikes"
             android:exported="false" />
         <activity

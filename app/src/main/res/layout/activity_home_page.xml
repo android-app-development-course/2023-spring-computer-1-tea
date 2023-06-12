@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePageActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="260dp"
+            android:background="@drawable/picture"/>
+        <TextView
+            android:id="@+id/title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="偷得浮生半日闲，今天饮茶了mei"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/gray"/>
+        <ImageView
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_line"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/ic_head"
+            android:layout_gravity="left" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="9dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="30dp">
+                <TextView
+                    android:id="@+id/name_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="昵称 :"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+                    android:layout_marginLeft="7dp"
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="3dp">
+                <TextView
+                    android:id="@+id/account_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="账号 :"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:layout_marginLeft="7dp"
+                    android:id="@+id/account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_line"
+                android:layout_marginLeft="23dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="50dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="23dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_love" />
+
+            <Button
+                android:id="@+id/love"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="我的收藏"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:background="@color/transparent"
+                android:onClick="love"/>
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="25dp"
+                android:background="@drawable/ic_skip"
+                android:layout_marginTop="20dp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="280dp"
+            android:layout_height="5dp"
+            android:background="@drawable/ic_line1"
+            android:layout_marginLeft="60dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="50dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="27dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_support" />
+
+            <Button
+                android:id="@+id/support"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="我的点赞"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:background="@color/transparent"
+                android:onClick="support"/>
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="25dp"
+                android:background="@drawable/ic_skip"
+                android:layout_marginTop="20dp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="280dp"
+            android:layout_height="5dp"
+            android:background="@drawable/ic_line1"
+            android:layout_marginLeft="60dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="50dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_taste" />
+
+            <Button
+                android:id="@+id/taste"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="我的口味"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:background="@color/transparent"
+                android:onClick="taste"/>
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="25dp"
+                android:background="@drawable/ic_skip"
+                android:layout_marginTop="20dp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="280dp"
+            android:layout_height="5dp"
+            android:background="@drawable/ic_line1"
+            android:layout_marginLeft="60dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="50dp">
+
+            <ImageView
+                android:layout_width="27dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_exit" />
+
+            <Button
+                android:id="@+id/exit"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="退出登录"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:background="@color/transparent"
+                android:onClick="exit"/>
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="25dp"
+                android:background="@drawable/ic_skip" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="280dp"
+            android:layout_height="5dp"
+            android:background="@drawable/ic_line1"
+            android:layout_marginLeft="60dp" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="40dp"
+        android:background="@color/white">
+
+        <ImageButton
+            android:id="@+id/first"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_first"
+            android:onClick="first"/>
+
+        <ImageButton
+            android:id="@+id/community"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_community"
+            android:layout_marginLeft="70dp"
+            android:onClick="community"/>
+
+        <ImageButton
+            android:id="@+id/my"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_my"
+            android:layout_marginLeft="70dp"
+            android:onClick="my"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

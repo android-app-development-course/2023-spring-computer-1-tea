@@ -3,6 +3,8 @@ package com.example.yingcha;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -27,7 +29,9 @@ public class MyLikes extends AppCompatActivity {
     private GridView gridView;
     private List<Collection> mCollectionList;
     private LikesAdapter mLikesAdapter;
-
+    private TextView myLikeText;
+    private Typeface typeFace;
+    private ImageView returnButton;
     private CollectionDBOpenHelper mCollectionDBOpenHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +45,12 @@ public class MyLikes extends AppCompatActivity {
      * 初始化控件
      */
     private void initView(){
+        typeFace =Typeface.createFromAsset(getAssets(),"fonts/SanJiKaiShu-2.ttf");
         gridView = (GridView) findViewById(R.id.gridview_like);
         mCollectionDBOpenHelper = new CollectionDBOpenHelper(this);
+        myLikeText = (TextView) findViewById(R.id.textView6);
+        myLikeText.setTypeface(typeFace);
+        returnButton = (ImageView) findViewById(R.id.returnButton);
     }
 
     /**
@@ -55,6 +63,15 @@ public class MyLikes extends AppCompatActivity {
      * 初始化相关事件
      */
     private void initEvent(Context context){
+        //返回主界面
+        returnButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context,HomePageActivity.class);
+                startActivity(intent);
+            }
+        });
+        //展示数据
         mLikesAdapter = new LikesAdapter(this,mCollectionList);
         gridView.setAdapter(mLikesAdapter);
 
