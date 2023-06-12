@@ -66,7 +66,7 @@ public class CollectionDBOpenHelper extends SQLiteOpenHelper {
 
         ByteArrayOutputStream os2 = new ByteArrayOutputStream();
         collection.getImage().compress(Bitmap.CompressFormat.PNG, 100, os2);
-        values.put("logo",os2.toByteArray());
+        values.put("image",os2.toByteArray());
 
         return db.insert(tableName,null,values);
     }
@@ -111,5 +111,14 @@ public class CollectionDBOpenHelper extends SQLiteOpenHelper {
             cursor.close();
         }
         return list;
+    }
+
+    /**
+     * 清空表中数据
+     * @param tableName 表名
+     */
+    public void deleteAll(String tableName){
+        SQLiteDatabase db = getWritableDatabase();
+        db.delete(tableName,null,null);
     }
 }

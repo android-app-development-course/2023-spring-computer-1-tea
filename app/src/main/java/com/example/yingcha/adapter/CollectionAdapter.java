@@ -22,11 +22,12 @@ public class CollectionAdapter extends BaseAdapter {
     private List<Collection> mCollectionList;
     private LayoutInflater mLayoutInflater;
     private Context mContext;
-
+    private CollectionDBOpenHelper collectionDBOpenHelper;
     public CollectionAdapter(Context mContext,List<Collection> mCollectionList) {
         this.mCollectionList = mCollectionList;
         this.mContext = mContext;
         mLayoutInflater = LayoutInflater.from(mContext);
+        collectionDBOpenHelper = new CollectionDBOpenHelper(mContext);
     }
 
     @Override
@@ -58,9 +59,19 @@ public class CollectionAdapter extends BaseAdapter {
         Collection collection = mCollectionList.get(i);
         //展示数据
         username.setText(collection.getUsername());
-        userId.setText(collection.getId());
+        userId.setText(collection.getId().toString());
         image.setImageBitmap(collection.getImage());
         logo.setImageBitmap(collection.getLogo());
+
+        ImageView collectBtn = view.findViewById(R.id.collectBtn);
+        collectBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                collectionDBOpenHelper.deleteById(collection.getId(), CollectionDBOpenHelper.TABLE_NAME_COLLECTION);
+                collectBtn.setVisibility(View.GONE);
+                notifyDataSetChanged();
+            }
+        });
         return view;
     }
 }

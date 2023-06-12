@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Rect;
 import android.os.Bundle;
@@ -160,7 +161,7 @@ public class CommunityActivity extends AppCompatActivity {
     }
     //跳转到我的页面
     public void my(View view) {
-        Intent intent=new Intent(this,MainActivity.class);
+        Intent intent=new Intent(this,HomePageActivity.class);
         startActivity(intent);
     }
     //更新数据

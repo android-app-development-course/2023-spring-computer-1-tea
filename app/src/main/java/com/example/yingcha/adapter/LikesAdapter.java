@@ -2,15 +2,18 @@ package com.example.yingcha.adapter;
 
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.yingcha.R;
 import com.example.yingcha.bean.Collection;
+import com.example.yingcha.db.CollectionDBOpenHelper;
 
 import java.util.List;
 
@@ -18,11 +21,13 @@ public class LikesAdapter extends BaseAdapter {
     private List<Collection> mCollectionList;
     private LayoutInflater mLayoutInflater;
     private Context mContext;
-
+    private CollectionDBOpenHelper collectionDBOpenHelper;
     public LikesAdapter(Context mContext, List<Collection> mCollectionList) {
         this.mCollectionList = mCollectionList;
         this.mContext = mContext;
         mLayoutInflater = LayoutInflater.from(mContext);
+        collectionDBOpenHelper = new CollectionDBOpenHelper(mContext);
+
     }
 
     @Override
@@ -54,9 +59,18 @@ public class LikesAdapter extends BaseAdapter {
         Collection collection = mCollectionList.get(i);
         //展示数据
         username.setText(collection.getUsername());
-        userId.setText(collection.getId());
+        userId.setText(collection.getId().toString());
         image.setImageBitmap(collection.getImage());
         logo.setImageBitmap(collection.getLogo());
+        ImageView likeBtn = view.findViewById(R.id.likeBtn);
+        likeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                collectionDBOpenHelper.deleteById(collection.getId(), CollectionDBOpenHelper.TABLE_NAME_LIKE);
+                likeBtn.setVisibility(View.GONE);
+                notifyDataSetChanged();
+            }
+        });
         return view;
     }
 }

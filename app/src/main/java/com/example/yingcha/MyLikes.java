@@ -71,9 +71,10 @@ public class MyLikes extends AppCompatActivity {
         /**
          * 添加长按出现浮窗
          */
-        gridView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
                 //获取数据
                 Collection collection = mCollectionList.get(i);
@@ -88,18 +89,22 @@ public class MyLikes extends AppCompatActivity {
                 //对应弹窗和布局
                 popupWindow.setContentView(inflate);
                 //设置弹窗位置
-                popupWindow.showAsDropDown(view, Gravity.CENTER,0);
+                popupWindow.setTouchable(true);
+                popupWindow.setFocusable(false);
+                popupWindow.showAtLocation(inflate,Gravity.CENTER,0,0);
+                popupWindow.showAsDropDown(inflate,0,0);
+                popupWindow.setOutsideTouchable(false);
                 //设置展现数据
-                ImageView logo = (ImageView) findViewById(R.id.winLogo);
-                ImageView image = (ImageView)findViewById(R.id.winImage);
-                TextView username = (TextView) findViewById(R.id.winUsername);
-                TextView content = (TextView)findViewById(R.id.winContent);
+                ImageView logo = (ImageView) inflate.findViewById(R.id.winLogo);
+                ImageView image = (ImageView)inflate.findViewById(R.id.winImage);
+                TextView username = (TextView) inflate.findViewById(R.id.winUsername);
+                TextView content = (TextView)inflate.findViewById(R.id.winContent);
                 logo.setImageBitmap(collection.getLogo());
                 image.setImageBitmap(collection.getImage());
                 username.setText(collection.getUsername());
                 content.setText(collection.getContent());
                 //设置布局内点击事件
-                Button button = inflate.findViewById(R.id.winCloseBtn);
+                ImageView button = inflate.findViewById(R.id.winCloseBtn);
                 button.setOnClickListener(new View.OnClickListener() {
                     /**
                      * 关闭弹窗
@@ -111,14 +116,13 @@ public class MyLikes extends AppCompatActivity {
                     }
                 });
 
-                return true;
             }
         });
 
     }
 
     public void quitLike(View view) {
-        TextView userIdText = (TextView) findViewById(R.id.userId_like);
+        TextView userIdText =  view.findViewById(R.id.userId_like);
         Integer userId = Integer.getInteger(userIdText.getText().toString());
         int res = mCollectionDBOpenHelper.deleteById(userId,CollectionDBOpenHelper.TABLE_NAME_LIKE);
         //实现刷新

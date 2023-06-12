@@ -94,7 +94,7 @@ public class HomePageActivity extends AppCompatActivity {
 
     //跳转到社区页面
     public void community(View view) {
-        Intent intent=new Intent(this,HomePageActivity.class);
+        Intent intent=new Intent(this,CommunityActivity.class);
         startActivity(intent);
     }
 

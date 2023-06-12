@@ -1,8 +1,13 @@
 package com.example.yingcha.adapter;
 
+import static android.provider.MediaStore.Images.Media.getBitmap;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +21,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.yingcha.CommentActivity;
 import com.example.yingcha.CommunityActivity;
 import com.example.yingcha.R;
+import com.example.yingcha.bean.Collection;
+import com.example.yingcha.db.CollectionDBOpenHelper;
 import com.example.yingcha.db.CommuItemDB;
 import com.example.yingcha.bean.CommunityItem;
 
@@ -25,6 +32,8 @@ import java.util.List;
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder>{
 
     private List<CommunityItem> itemList;
+
+    private CollectionDBOpenHelper collectionDBOpenHelper;
     private LayoutInflater layoutInflater;
     private Context context;
     private CommuItemDB cmdb;
@@ -32,6 +41,8 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder>{
         this.itemList=itemList;
         this.context=context;
         layoutInflater=LayoutInflater.from(context);
+        //创建数据库对象
+        collectionDBOpenHelper = new CollectionDBOpenHelper(context);
     }
     @NonNull
     @Override
@@ -64,6 +75,19 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder>{
                     b=true;
                 }
                 else{
+                    //添加点赞内容到数据库
+                    //封装数据
+                    Collection collection = new Collection();
+                    collection.setUsername(item.getUsernames());
+                    collection.setContent(item.getmContext());
+                    //图片1
+                    Bitmap bitmap1 = ((BitmapDrawable)holder.img1.getDrawable()).getBitmap();
+                    collection.setImage(bitmap1);
+                    //图片2
+                    Bitmap bitmap2 = ((BitmapDrawable)holder.head.getDrawable()).getBitmap();
+                    collection.setLogo(bitmap2);
+                    //数据库插入数据
+                    collectionDBOpenHelper.insert(collection,CollectionDBOpenHelper.TABLE_NAME_LIKE);
                     v.setSelected(true);
                 }
             }
@@ -78,6 +102,19 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder>{
                     b=true;
                 }
                 else{
+                    //添加点赞内容到数据库
+                    //封装数据
+                    Collection collection = new Collection();
+                    collection.setUsername(item.getUsernames());
+                    collection.setContent(item.getmContext());
+                    //图片1
+                    Bitmap bitmap1 = ((BitmapDrawable)holder.img1.getDrawable()).getBitmap();
+                    collection.setImage(bitmap1);
+                    //图片2
+                    Bitmap bitmap2 = ((BitmapDrawable)holder.head.getDrawable()).getBitmap();
+                    collection.setLogo(bitmap2);
+                    //数据库插入数据
+                    collectionDBOpenHelper.insert(collection,CollectionDBOpenHelper.TABLE_NAME_COLLECTION);
                     v.setSelected(true);
                 }
             }

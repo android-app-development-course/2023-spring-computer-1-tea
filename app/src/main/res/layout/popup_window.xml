@@ -20,6 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="断章"
+        android:textColor="@color/black"
         android:layout_marginTop="45dp"
         android:layout_marginLeft="130dp"
         android:textSize="20dp"/>
@@ -46,6 +47,7 @@
         android:textSize="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:text="自制下火凉茶——\n润喉罗汉果胎菊水+竹蔗茅根水！"
         android:layout_marginTop="110dp"
         android:layout_marginLeft="30dp"
