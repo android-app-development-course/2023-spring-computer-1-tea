@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/comment_item_style">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!--头像图片，这个CricleImageView是另写的一个类继承自ImageView，用来实现圆形的图片效果和缩放效果的-->
+        <com.example.yingcha.CircleImage
+            android:id="@+id/comment_item_head"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cm_tx1" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--昵称区域-->
+            <TextView
+                android:id="@+id/comment_item_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="17dp"
+                android:text="柒柒"
+                android:textColor="#333333"
+                android:textSize="15sp" />
+            <!--创建时间-->
+            <TextView
+                android:id="@+id/comment_item_createdtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="17dp"
+                android:text="2023年4月15日"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!--内容区域-->
+        <TextView
+            android:id="@+id/comment_item_context"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="53dp"
+            android:layout_marginRight="50dp"
+            android:text="看起来很好喝哦！"
+            android:textColor="#333"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="5dp">
+        <!--评论区域-->
+        <LinearLayout
+            android:id="@+id/comment_item_pl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="30dp"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/comment_btn_pl"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:scaleType="fitXY"
+                android:background="@color/white"
+                android:src="@drawable/ic_comment" />
+        </LinearLayout>
+        <!--点赞区域-->
+        <LinearLayout
+            android:id="@+id/comment_item_dz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="30dp"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/comment_btn_dz"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/comment_dz_pressed" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

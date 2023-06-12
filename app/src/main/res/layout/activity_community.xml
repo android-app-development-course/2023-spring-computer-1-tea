@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommunityActivity"
+    android:background="#f2f2f2">
+
+    <com.example.yingcha.views.SobViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="120dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:layout_marginBottom="5dp"
+            android:background="#f2f2f2">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/community_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"/>
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="73dp"
+        android:onClick="add"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="#387633"
+        app:elevation="0dp"
+        app:tint="@color/white"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white">
+
+        <ImageButton
+            android:id="@+id/first"
+            android:layout_width="57dp"
+            android:layout_height="58dp"
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/ic_first"
+            android:onClick="first" />
+
+        <ImageButton
+            android:id="@+id/community"
+            android:layout_width="51dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:background="@drawable/commu"
+            android:onClick="community" />
+
+        <ImageButton
+            android:id="@+id/my"
+            android:layout_width="41dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="70dp"
+            android:background="@drawable/commu_my"
+            android:onClick="my" />
+
+    </LinearLayout>
+
+</RelativeLayout>

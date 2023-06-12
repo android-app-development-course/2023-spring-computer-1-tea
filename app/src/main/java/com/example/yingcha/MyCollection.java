@@ -49,14 +49,7 @@ public class MyCollection extends AppCompatActivity {
      * 初始化相关事件
      */
     private void initEvent(Context context){
-        //设置返回按钮
-        returnButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(context,HomePageActivity.class);
-                startActivity(intent);
-            }
-        });
+
         //展示数据
        mCollectionAdapter = new CollectionAdapter(this,mCollectionList);
        gridView.setAdapter(mCollectionAdapter);
@@ -139,5 +132,9 @@ public class MyCollection extends AppCompatActivity {
         }else{
             Toast.makeText(this,"取消失败",Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void collectBackTome(View view) {
+        this.finish();
     }
 }

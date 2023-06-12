@@ -63,14 +63,7 @@ public class MyLikes extends AppCompatActivity {
      * 初始化相关事件
      */
     private void initEvent(Context context){
-        //返回主界面
-        returnButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(context,HomePageActivity.class);
-                startActivity(intent);
-            }
-        });
+
         //展示数据
         mLikesAdapter = new LikesAdapter(this,mCollectionList);
         gridView.setAdapter(mLikesAdapter);
@@ -136,5 +129,9 @@ public class MyLikes extends AppCompatActivity {
         }else{
             Toast.makeText(this,"取消失败",Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void likeBackHome(View view) {
+        this.finish();
     }
 }
