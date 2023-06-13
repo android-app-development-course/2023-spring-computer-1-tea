@@ -12,6 +12,15 @@
         android:theme="@style/Theme.YingCha"
         tools:targetApi="31">
         <activity
+            android:name=".tea_details"
+            android:exported="false" />
+        <activity
+            android:name=".soup_details"
+            android:exported="false" />
+        <activity
+            android:name=".first_page"
+            android:exported="false" />
+        <activity
             android:name=".AddCoummnityActivity"
             android:exported="false" />
         <activity

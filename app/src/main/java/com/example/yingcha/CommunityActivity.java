@@ -150,7 +150,7 @@ public class CommunityActivity extends AppCompatActivity {
     };
     //跳转到首页
     public void first(View view) {
-        Intent intent=new Intent(this,MainActivity.class);
+        Intent intent=new Intent(this,first_page.class);
         startActivity(intent);
     }
 

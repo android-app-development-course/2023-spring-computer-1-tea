@@ -88,7 +88,7 @@ public class HomePageActivity extends AppCompatActivity {
 
     //跳转到首页
     public void first(View view) {
-        Intent intent=new Intent(this,HomePageActivity.class);
+        Intent intent=new Intent(this,first_page.class);
         startActivity(intent);
     }
 

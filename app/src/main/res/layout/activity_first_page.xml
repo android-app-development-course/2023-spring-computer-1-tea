@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2">
+
+    <ImageView
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-8dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="638dp"
+        android:background="@drawable/head"
+        android:contentDescription="TODO"
+        android:scaleType="fitXY"/>
+
+    <com.youth.banner.Banner
+        android:id="@+id/main_banner"
+        android:layout_width="match_parent"
+        android:layout_height="195dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="0dp"
+        app:banner_loop_time="2000"
+        app:banner_radius="15dp" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="165dp"
+        android:layout_height="27dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="263dp"
+        android:layout_marginEnd="242dp"
+        android:layout_marginBottom="305dp"
+        android:text="汤饮推荐"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497" />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="165dp"
+        android:layout_height="27dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="430dp"
+        android:layout_marginEnd="242dp"
+        android:layout_marginBottom="145dp"
+        android:text="浮小麦马蹄牛蛙汤"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497" />
+
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="165dp"
+        android:layout_height="27dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="430dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="145dp"
+        android:text="五指毛桃猪骨汤"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497" />
+
+    <ImageButton
+        android:id="@+id/detail1"
+        android:layout_width="wrap_content"
+        android:layout_height="135dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="295dp"
+        android:layout_marginEnd="216dp"
+        android:layout_marginBottom="150dp"
+        android:background="@drawable/detail1"
+        android:contentDescription="TODO"
+        android:onClick="soup" />
+
+    <ImageView
+        android:id="@+id/banner2"
+        android:layout_width="wrap_content"
+        android:layout_height="135dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="295dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="150dp"
+        android:background="@drawable/banner2"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="165dp"
+        android:layout_height="27dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="470dp"
+        android:layout_marginEnd="236dp"
+        android:layout_marginBottom="105dp"
+        android:text="茶饮推荐"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497" />
+
+    <TextView
+        android:id="@+id/tv5"
+        android:layout_width="165dp"
+        android:layout_height="27dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="590dp"
+        android:layout_marginEnd="236dp"
+        android:layout_marginBottom="0dp"
+        android:text="茅根竹蔗"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497" />
+
+    <TextView
+        android:id="@+id/tv6"
+        android:layout_width="165dp"
+        android:layout_height="27dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="590dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="0dp"
+        android:text="洋参麦冬茶"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497" />
+
+    <ImageButton
+        android:id="@+id/detail3"
+        android:layout_width="wrap_content"
+        android:layout_height="135dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginEnd="211dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/detail3"
+        android:contentDescription="TODO"
+        android:onClick="tea" />
+
+    <ImageView
+        android:id="@+id/banner3"
+        android:layout_width="wrap_content"
+        android:layout_height="135dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/banner3"
+        android:contentDescription="TODO" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="-25dp"
+        tools:layout_editor_absoluteY="667dp">
+
+        <ImageButton
+            android:id="@+id/first"
+            android:layout_width="63dp"
+            android:layout_height="58dp"
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/ic_first_my"
+            android:onClick="first"
+            android:contentDescription="TODO" />
+
+        <ImageButton
+            android:id="@+id/community"
+            android:layout_width="62dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="70dp"
+            android:background="@drawable/ic_community"
+            android:contentDescription="TODO"
+            android:onClick="community" />
+
+        <ImageButton
+            android:id="@+id/my"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="70dp"
+            android:background="@drawable/ic_my"
+            android:contentDescription="TODO"
+            android:onClick="my" />
+
+    </LinearLayout>
+</RelativeLayout>
