@@ -122,7 +122,7 @@
         android:layout_marginTop="295dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="150dp"
-        android:background="@drawable/banner2"
+        android:background="@drawable/banner22"
         android:contentDescription="TODO" />
 
     <TextView
@@ -217,7 +217,7 @@
         android:layout_marginTop="500dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="20dp"
-        android:background="@drawable/banner3"
+        android:background="@drawable/banner23"
         android:contentDescription="TODO" />
 
     <LinearLayout

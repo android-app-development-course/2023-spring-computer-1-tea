@@ -80,11 +80,11 @@ public class CommunityActivity extends AppCompatActivity {
     private void initData() {
         //准备数据
         //轮播图
-        mData.add(R.drawable.banner5);
-        mData.add(R.drawable.banner2);
-        mData.add(R.drawable.banner3);
-        mData.add(R.drawable.banner4);
-        mData.add(R.drawable.banner1);
+        mData.add(R.drawable.banner25);
+        mData.add(R.drawable.banner22);
+        mData.add(R.drawable.banner23);
+        mData.add(R.drawable.banner24);
+        mData.add(R.drawable.banner21);
         //数据准备完后进行更新
         mpagerAdapter.notifyDataSetChanged();
         //设置中间位置

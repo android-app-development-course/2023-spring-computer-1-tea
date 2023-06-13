@@ -1,26 +1,15 @@
 package com.example.yingcha;
 
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.Rect;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
 
 //import com.example.first.views.FirstItem;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.youth.banner.Banner;
 import com.youth.banner.adapter.BannerImageAdapter;
 import com.youth.banner.holder.BannerImageHolder;
@@ -97,11 +86,11 @@ public class first_page extends AppCompatActivity {
 
     private void initData(){
         banner_data = new ArrayList<>();
-        banner_data.add(R.drawable.banner11);
-        banner_data.add(R.drawable.banner12);
-        banner_data.add(R.drawable.banner13);
-        banner_data.add(R.drawable.banner14);
-        banner_data.add(R.drawable.banner15);
+        banner_data.add(R.drawable.banner1);
+        banner_data.add(R.drawable.banner2);
+        banner_data.add(R.drawable.banner3);
+        banner_data.add(R.drawable.banner4);
+        banner_data.add(R.drawable.banner5);
     }
 
 ////    @Override
